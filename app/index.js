@@ -1,10 +1,11 @@
-"use strict";
-require("./main.scss");
+import './main.css';
+import React from 'react';
+import App from './components/App.js';
 
-var component = require('./component');
+main();
 
-var app = document.createElement('div');
-
-document.body.appendChild(app);
-
-app.appendChild(component());
+function main() {
+  const app = document.createElement('div');
+  document.body.appendChild(app);
+  React.render(<App />, app);
+}

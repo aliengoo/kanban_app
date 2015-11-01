@@ -44,18 +44,3 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ]
 };
-//
-//if(TARGET === 'start' || !TARGET) {
-//  module.exports = merge(common, {
-//    devtool: 'eval-source-map',
-//    devServer: {
-//      historyApiFallback: true,
-//      hot: true,
-//      inline: true,
-//      progress: true
-//    },
-//    plugins: [
-//      new webpack.HotModuleReplacementPlugin()
-//    ]
-//  });
-//}

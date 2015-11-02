@@ -3,11 +3,9 @@ var path = require('path');
 var HtmlwebpackPlugin = require('html-webpack-plugin');
 var merge = require('webpack-merge');
 
-var TARGET = process.env.npm_lifecycle_event;
 var ROOT_PATH = path.resolve(__dirname);
 var APP_PATH = path.resolve(ROOT_PATH, 'app');
 var BUILD_PATH = path.resolve(ROOT_PATH, 'build');
-console.log(TARGET);
 
 module.exports = {
   entry: APP_PATH,
@@ -19,13 +17,14 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     inline: true,
+    port: 9191,
     progress: true
   },
   devtool: 'eval-source-map',
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.js?$/,
         loaders: ['babel'],
         include: APP_PATH
       },

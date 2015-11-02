@@ -1,5 +1,6 @@
-import './main.css';
+import './main.scss';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import App from './components/App.js';
 
 main();
@@ -7,5 +8,5 @@ main();
 function main() {
   const app = document.createElement('div');
   document.body.appendChild(app);
-  React.render(<App />, app);
+  ReactDOM.render(<App />, app);
 }
